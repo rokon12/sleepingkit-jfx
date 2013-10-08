@@ -41,4 +41,13 @@ public class WelcomeMessage {
     public void setCreatedOn(Date createdOn) {
         this.createdOn = createdOn;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("WelcomeMessage{");
+        sb.append("message='").append(message).append('\'');
+        sb.append(", createdOn=").append(createdOn);
+        sb.append('}');
+        return sb.toString();
+    }
 }

@@ -31,7 +31,7 @@ import java.util.List;
  * http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html#beans-java
  */
 @Configuration
-@PropertySource(value="classpath:/sleepingkit-client.properties")
+@PropertySource(value = "classpath:/sleepingkit-client.properties")
 public class SimpleRestAppFactory {
 
     /**
@@ -74,6 +74,16 @@ public class SimpleRestAppFactory {
         return loadController("/fxml/Welcome.fxml");
     }
 
+    @Bean
+    public EmployeeController employeeController() {
+        return loadController("/fxml/Employee.fxml");
+    }
+
+    @Bean
+    public SleepingKitCalculatorController sleepingKitCalculatorController() {
+        return loadController("/fxml/SleepingKit/BasicApplication.fxml");
+    }
+
     /**
      * Creates a WelcomeRestService which provides a nice wrapper around the REST calls the server, encapsulating all
      * the server calls and String manipulations in one place.
@@ -97,7 +107,7 @@ public class SimpleRestAppFactory {
      * the View via it. This load method hooks reverses the focus of the FXMLLoader to make things Controller based.
      *
      * @param fxmlFile the file to load the FXML from, this should be relative to the classpath.
-     * @param <T> the type of Controller to return is inferred by whatever you assign the result of this method to.
+     * @param <T>      the type of Controller to return is inferred by whatever you assign the result of this method to.
      * @return the Controller loaded from the FXML specified which should have its view loaded and attached.
      */
     private <T> T loadController(String fxmlFile) {

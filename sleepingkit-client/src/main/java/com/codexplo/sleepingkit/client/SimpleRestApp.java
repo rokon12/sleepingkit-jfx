@@ -37,11 +37,14 @@ public class SimpleRestApp extends Application {
         log.info("Starting SimpleRestApp application");
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SimpleRestAppFactory.class);
-        WelcomeController mainController = context.getBean(WelcomeController.class);
-        Scene scene = new Scene(mainController.getRoot(), 600, 400);
-        scene.getStylesheets().add("/styles/styles.css");
+        //WelcomeController mainController = context.getBean(WelcomeController.class);
+        //EmployeeController employeeController = context.getBean(EmployeeController.class);
+        SleepingKitCalculatorController sleepingKitCalculatorController = context.getBean(SleepingKitCalculatorController.class);
+
+        Scene scene = new Scene(sleepingKitCalculatorController.getRoot(), 600, 400);
+        scene.getStylesheets().add("/fxml/SleepingKit/BasicApplication.css");
         stage.setScene(scene);
-        stage.setTitle("JavaFX REST Client");
+        stage.setTitle("Sleeping Kit");
         stage.show();
     }
 }
