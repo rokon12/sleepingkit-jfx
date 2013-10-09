@@ -81,7 +81,7 @@ public class SimpleRestAppFactory {
 
     @Bean
     public SleepingKitCalculatorController sleepingKitCalculatorController() {
-        return loadController("/fxml/SleepingKit/BasicApplication.fxml");
+        return loadController("/fxml/SleepingKit/LoginView.fxml");
     }
 
     /**

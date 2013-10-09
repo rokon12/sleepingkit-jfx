@@ -42,7 +42,7 @@ public class SimpleRestApp extends Application {
         SleepingKitCalculatorController sleepingKitCalculatorController = context.getBean(SleepingKitCalculatorController.class);
 
         Scene scene = new Scene(sleepingKitCalculatorController.getRoot(), 600, 400);
-        scene.getStylesheets().add("/fxml/SleepingKit/BasicApplication.css");
+        scene.getStylesheets().add("/fxml/SleepingKit/LoginView.css");
         stage.setScene(scene);
         stage.setTitle("Sleeping Kit");
         stage.show();
