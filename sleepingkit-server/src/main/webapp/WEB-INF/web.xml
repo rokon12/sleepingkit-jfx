@@ -9,7 +9,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-          version="2.5">
+         version="2.5">
 
     <!-- first we define our servlet - this will automatically load 'rest-app-servlet.xml' and wire everything up -->
     <servlet>
@@ -17,6 +17,11 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/rest-app-servlet.xml</param-value>
+    </context-param>
 
     <!-- then we expose our servlet - we could use a more specific URL pattern, but for ease we just map everything -->
     <servlet-mapping>

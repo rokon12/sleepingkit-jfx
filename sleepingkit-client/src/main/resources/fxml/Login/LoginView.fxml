@@ -22,7 +22,7 @@
         </HBox>
         <HBox layoutX="14.0" layoutY="49.0" prefHeight="35.0" prefWidth="373.0" spacing="20.0">
           <children>
-            <Label fx:id="passwordLabel" contentDisplay="LEFT" graphicTextGap="5.0" labelFor="$root" prefWidth="59.0" text="Password" />
+            <Label fx:id="passwordLabel" contentDisplay="LEFT" graphicTextGap="5.0" labelFor="$root" prefWidth="72.0" text="Password" />
             <PasswordField id="password" fx:id="passwodField" prefWidth="273.0" />
           </children>
         </HBox>
@@ -43,7 +43,7 @@
   <top>
     <Label prefWidth="347.0" text="Sleeping Kit - Sign In" textAlignment="CENTER" textFill="radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 100.0px 100.0px, radius 200.0px, 0xff0000ff 0.0%, 0x0000ffff 30.0%, 0x000000ff 100.0%)" textOverrun="LEADING_ELLIPSIS" underline="false" wrapText="false" BorderPane.alignment="CENTER">
       <font>
-        <Font name="Cooper Black" size="30.0" />
+        <Font size="30.0" />
       </font>
     </Label>
   </top>
