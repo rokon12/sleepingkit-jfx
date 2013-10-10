@@ -10,8 +10,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface UserService {
-    public void save(User user);
+    public User save(User user);
 
     public User findById(int id);
 
+    void delete(User user);
 }
